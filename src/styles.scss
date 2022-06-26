@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bulma/bulma";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+body {
+  min-height: 100vh;
+}
+
+app-root {
+  display: block;
+  height: 100%;
+}
+
+.full-container {
+  flex: 1 1 100%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: white;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4C4C4;
+  border-radius: 10px;
+}

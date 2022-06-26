@@ -1,0 +1,27 @@
+<div *ngIf="!isFinish" class="is-flex is-align-content-center is-flex-direction-column is-justify-content-center">
+  <div class="is-align-self-center">
+    <div *ngFor="let word of wordTries; index as i" class="is-flex is-flex-direction-row ">
+      <div class="square-word" *ngFor="let x of wordLength" [class]="getSquareClasses(results[i][x])">
+        <p *ngIf="word">{{ word[x] | uppercase }}</p>
+        <p *ngIf="i == currentTry">{{ typedWord[x] | uppercase }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="field has-addons mt-4 is-fullwidth is-flex-grow-1 is-align-self-center">
+    <div class="control">
+      <input class="input" type="text" placeholder="Escribe..." [(ngModel)]="typedWord" [maxlength]="currentWord.length">
+    </div>
+    <div class="control">
+      <a class="button is-info" (click)="submitWord()">
+        Enviar
+      </a>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isFinish">
+  <p *ngIf="hasWin; else lost" class="win-word">GANASTEEE!!!</p>
+  <ng-template #lost>
+    <p class="win-word has-text-danger">PERDISTEEE!!!</p>
+  </ng-template>
+</div>

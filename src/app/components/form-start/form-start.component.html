@@ -1,0 +1,8 @@
+<div class="is-flex is-flex-direction-column">
+  <p class="text-description has-text-centered mt-6">Ingresa tu nombre para iniciar</p>
+  <input class="input mt-2 input-start is-align-self-center"
+         type="text" placeholder="Nombre"
+         [(ngModel)]="name">
+  <button class="button is-primary mt-4 button-start is-align-self-center" (click)="addUser()" >Iniciar</button>
+</div>
+

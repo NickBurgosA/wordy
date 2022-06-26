@@ -1,0 +1,27 @@
+<div class="level">
+  <div class="level-left"></div>
+  <div class="level-right">
+    <button routerLink="/" class="button">+ Nuevo Usuario</button>
+  </div>
+</div>
+<div *ngFor="let user of users">
+  <div class="user-container mt-2">
+    <div class="columns">
+      <div class="column is-6 is-flex is-flex-direction-column is-justify-content-center pl-6">
+        <span class="has-text-weight-bold">{{ user.name }}</span>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <p class="is-size-4 has-text-weight-bold">{{ user.wins }}</p>
+        <p class="is-size-6">Wins</p>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <p class="is-size-4 has-text-weight-bold line-he">{{ user.gamesPlayed }}
+        </p>
+        <p class="is-size-6">Juegos</p>
+      </div>
+      <div class="column is-6 is-flex">
+        <button class="button is-info is-align-self-center" (click)="goToGame(user)">Jugar</button>
+      </div>
+    </div>
+  </div>
+</div>
