@@ -36,8 +36,6 @@ export class GameComponent implements OnInit {
       this.wordTries.push('');
       this.results.push(this.wordLength.map(() => 0))
     });
-    console.log(this.currentWord);
-    console.log(this.wordLength)
   }
 
   get nTries() {
